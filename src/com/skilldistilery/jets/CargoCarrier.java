@@ -5,4 +5,8 @@ public interface CargoCarrier {
 //	implement all interfaces. We want Jets with different capabilities.
 	
 	public void loadCargo();
+
+	public static void fly() {
+		
+	}
 }

@@ -22,50 +22,17 @@ public class Menu {
 		System.out.println(menu);
 		String choice = sc.next();
 		
-		//getJets();
-		
+		do {
 		for (int i = 0; i < menu.length; i++) {
-			if (choice.equals("2")) { //fly all jets
-				//fly();
-			}
-			if (choice.equals("3")) { //view fastest jet
-			//*****Note: these methods must search the collection of jets to find the 
-			//appropriate jet.*****
 			
-			}
-			if (choice.equals("4")) { //view jet w/longest range
-			//*****Note: these methods must search the collection of jets to find the 
-			//appropriate jet.*****
-			}
-			if (choice.equals("5")) { //load cargo planes
-			//*****Note: these methods must search the collection of jets to find the 
-			//appropriate jet.*****
-			 //Load all Cargo Jets finds all implementors of the CargoCarrier 
-			//interface and calls loadCargo() on each
-			//loadCargo();
-			}
-			if (choice.equals("6")) { //dogfight
-			//*****Note: these methods must search the collection of jets to find the 
-			//appropriate jet.*****
-			//fight();
-			}
-			if (choice.equals("11")) { //quit
-				//exit
+			
+			if (choice.equals("2")) { //fly all jets
+				fly();
 			}
 		}
-		//if (choice.equals("7")) { //add plane
-			//addJet(); Submenu
-		//}
-		//if (choice.equals("8")) { //hire pilot
-			//hire();
-		//}
-		//if (choice.equals("9")) { //train pilot
-			//train();
-		//}
-		//if (choice.equals("10")) { //assign pilot
-			//assign();
-		//}
 		
+		}
+		while(!choice.equals("11"));
 		}			
 	}
 

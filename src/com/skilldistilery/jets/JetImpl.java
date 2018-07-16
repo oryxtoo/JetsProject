@@ -24,6 +24,11 @@ public class JetImpl extends Jet {
 	public Object fly(Object getJetInfo, double speed, int range) {
 		return super.fly(getJetInfo, 0, 0);
 	}
+	
+	public void displayJet() {
+	    String jetData = this.toString();
+	    System.out.println(jetData);
+	  }
 
 	@Override
 	public String toString() {

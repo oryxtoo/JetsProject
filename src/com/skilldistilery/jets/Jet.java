@@ -7,16 +7,15 @@ private double speed; //mph and/or mach
 private int range;
 private long price;
 private String type;
-}
+
 //----constructors--------------------------------------------------------------
 
 public Jet(String m, double s, int r, long p, String t) {
-    super();
-    model = m;
-    speed = s;
-    range = r;
-    price = p;
-    type = t;
+    this.model = m;
+    this.speed = s;
+    this.range = r;
+    this.price = p;
+    this.type = t;
   }
 
 //---------methods--------------------------------------------
@@ -31,29 +30,15 @@ public Jet(String m, double s, int r, long p, String t) {
 		return speedInMach;
 		}
 	
-	Object getJetInfo(String m, double s, int r, long p, String type) {
-		Object info = getJetInfo(null, 0, 0, 0, null);
-		System.out.println(info);
-		return info;
+	public void fly(Jet[] jetArray) {
+		for (int i = 0; i < jetArray.length; i++) {
+			Jet j = jetArray[i];
+			System.out.println("Model: " + j.getModel() + "Speed: " + j.getSpeed() + "Range: "
+			+ j.getRange() + "Price: " + j.getPrice() + "Type: " + getType());
+			System.out.println("Flight Time: " + (j.getRange() / j.getSpeed()));
+		}
 	}
 	
-	public Object fly(Object getJetInfo, double speed, int range) {
-		return fly(getJetInfo, speed, range);
-	}
-	
-	public void displayJet() {
-	    String jetData = this.toString();
-	    System.out.println(jetData);
-	  }
-	
-	public String toString() {
-		return "Jet [model=" + model + ", speed=" + speed + ", range=" + 
-	range + ", price=" + price + "type=" + type + "]";
-	}
-//	private void printJets(Jet[] jets) {
-//	    for (Jet jet : jets) {
-//	      jet.displayJet();
-//	    }
 //------Getters & Setters--------------------------------------------------------
 
 	public String getModel() {
@@ -86,7 +71,11 @@ public Jet(String m, double s, int r, long p, String t) {
 	public void setType(String type) {
 		this.type = type;
 	}
-}		
+	public String toString() {
+		return "Jet [model=" + model + ", speed=" + speed + ", range=" + 
+	range + ", price=" + price + "type=" + type + "]";
+	}
+}	
 
 
 

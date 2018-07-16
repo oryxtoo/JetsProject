@@ -1,65 +1,51 @@
 package com.skilldistilery.jets;
+
 public class AirField extends Jet {
+
+	private Jet[] jets;
+	private int numJets = 0;
+
+	final private static int MAX_JETS = 200;
+
 	public AirField() {
+		jets = new Jet[MAX_JETS]; //create jets array with 200
 	}
 
-	//private Jet jets[];???
-	//private Pilot autoPilot;
-	//private int currentJetIndex;
-	 private AirField afOne;
-  
-	  {
-	    afOne = new AirField();
-	  }
-	  
-	private Jet[] jets = new Jet[200]; //create jet array
-	//add jets to array (5)
-	//	private Jet[] jets;
-	  private int numJets = 0;
-	  
-	  final private static int MAX_JETS = 200;
-  
-	  public void afOne() {
-	    jets = new Jet[MAX_JETS];
-		
-	  }
-	  public void addJet(Jet a) {
-	    jets[numJets] = a;
-	    numJets++;    // increment to reflect that we have one more jet
-	  }
-	  
-	  public Jet[] getJets() {
-	    Jet[] jetCopy;
-	    jetCopy = new Jet[numJets];
-	    for(int i=0; i < numJets; i++) {
-	      jetCopy[i] = jets[i];
-	    }  
-	    return jetCopy; //where is this returning?
-	  }
+	public void addJet(Jet a) {
+		jets[numJets] = a;
+		numJets++; // increment to reflect that we have one more jet
+	}
+
+	public Jet[] getJets() {
+		Jet[] jetCopy;
+		jetCopy = new Jet[numJets];
+		for (int i = 0; i < numJets; i++) {
+			jetCopy[i] = jets[i];
+		}
+		return jetCopy; // where is this returning?
+	}
+//
+//	public Jet[] findJetByType(String type) {
+//		Jet[] jetByType = null;
+//		Jet[] jets = afOne.getJets();
+//		return jetByType;
+//	}
+
+//	private void printJets(Jet[] jets) {
+//		for (Jet jet : jets) {
+//			jet.displayJet();
+//		}
 	
-	  public void addJetToFleet(Jet jet) {
-	    afOne.addJet(jet);
-	  }
-	  
-	  public Jet[] findJetByType(String type) {
-	    Jet[] jetByType = null;
-	    Jet[] jets = afOne.getJets();
-		return jetByType;
-	  }
-	  
-	  private void printJets(Jet[] jets) {
-		    for (Jet jet : jets) {
-		      jet.displayJet();
-		    }
-		  }
+	}
+
 //On program startup, populate the AirField with at least 5 Jets of different types.
 //The array must have extra space for adding Jets.	
-	
+
 //---------instance initializer----------------------------------------------
-	{		
-		 jets = new Jet[200];
-		 //pilot = new Pilot();
-	}
+//	{
+//		jets = new Jet[200];
+//		// pilot = new Pilot();
+//	}
 //----------------------------------------------------------------------------	
 //	jets.addJetToFleet(new Jet("Fairchild Republic A-10 Thunderbolt II", 439, 11000, 18800000, "Fighter"));
 //    jets.addJetToFleet(new Jet("General Dynamics F-16 Fighting Falcon", 1500, 7000, 18800000, "Fighter"));
@@ -70,13 +56,13 @@ public class AirField extends Jet {
 //    jets.fly();
 //    jets.fight();
 //    jets.loadCargo();
-    
+
 //    public void printJets(jets[]) {
 //    }
-    
+
 //    System.out.println("Total jets returned: " + jets.length);
 //  }
- 
+
 //  public class ParkingLotTester {
 //
 //	  public static void main(String[] args) {
@@ -105,7 +91,7 @@ public class AirField extends Jet {
 //	    
 //	    // Get the car array
 //	    cars = cr.getCars();    
-	
+
 //add jets (and pilot???) to array
 //public AirField(Jet[] jets /*Pilot autoPilot in seperate array?*/) {}
 //	public void addJet(Jet jets) {
@@ -114,7 +100,7 @@ public class AirField extends Jet {
 //				this.jets[i] = jets;
 //				break;
 //			}
-}		
+
 //public class ParkingLot {
 //	  private Car[] cars;
 //	  private int numCars = 0;

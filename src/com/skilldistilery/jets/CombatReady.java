@@ -5,4 +5,8 @@ public interface CombatReady {
 //	implement all interfaces. We want Jets with different capabilities.
 
 	public void fight();
+
+	public static void fly() {
+		
+	}
 }
