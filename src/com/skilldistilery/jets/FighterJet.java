@@ -1,3 +1,4 @@
+package com.skilldistilery.jets;
 
 public class FighterJet extends Jet implements CombatReady {
 

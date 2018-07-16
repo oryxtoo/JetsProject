@@ -1,16 +1,12 @@
-package
+package com.skilldistilery.jets;
+
 import java.util.Scanner;
 
 public class JetsApp {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-//		{
-//		<Edge> theQueue = new LinkedBlockingQueue<Edge>();.
-//		}
-		
-		
-//		JetsApp ja = new JetsApp();
-		
+//		Scanner sc = new Scanner(System.in);
+		  /* CONSTRUCTOR*/ JetsApp ja = new JetsApp();
+			ja.run();
 		//instantiate variables here?
 	}
 	private void run() {
@@ -22,17 +18,20 @@ public class JetsApp {
 		String choice = sc.next();
 		
 		getJets();
-		
-		
-		
-//	jets = jets[5];
-		jets[0] = a;
-		jets[1] = b;
-		jets[2] = c;
-		jets[3] = d;
-		jets[4] = e;
-	}
-
+//		jets.addJetToFleet(new Jet("Fairchild Republic A-10 Thunderbolt II", 439, 11000, 18800000, "Fighter"));
+//	    jets.addJetToFleet(new Jet("General Dynamics F-16 Fighting Falcon", 1500, 7000, 18800000, "Fighter"));
+//	    jets.addJetToFleet(new Jet("Lockheed SR-71 Blackbird", 2200, 101972, 34000000, "Fighter"));
+//	    jets.addJetToFleet(new Jet("Lockheed C-130 Hercules", 368, 60000, 31000000, "Cargo"));
+//	    jets.addJetToFleet(new Jet("Boeing C-17 Globemaster III ", 517, 171000, 21800000, "Cargo"));
+//		
+		//displayUserMenu();	
+	
+//	}
+//private void displayUserMenu() {
+//		
+//		
+//	}
+//-------METHODS-----------------------------------------------------------------
 	public Jet[] getJets() {
 		JetsApp afTwo = null;
 		Jet[] newJets = afTwo.getJets();
@@ -43,13 +42,7 @@ public class JetsApp {
 		}
 		return allJets;
 	}
-
-private void displayUserMenu() {
-	Object[] menu = null;
-	printMenu(menu[10]);
-	}
 }
-
 
 //	for (Jet jets : FighterJet) {
 //	      double speed = getSpeedInMach(jets);

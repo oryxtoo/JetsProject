@@ -1,3 +1,4 @@
+package com.skilldistilery.jets;
 public class AirField extends Jet {
 	public AirField() {
 	}

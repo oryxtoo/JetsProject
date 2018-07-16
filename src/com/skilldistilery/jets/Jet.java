@@ -1,3 +1,5 @@
+package com.skilldistilery.jets;
+
 public abstract class Jet {
 	
 private String model;
@@ -22,7 +24,6 @@ public Jet(String m, double s, int r, long p, String t) {
 	public Jet() {
 	
 }
-
 	public double getSpeedInMach(double speed) {
 		//if (type == "Fighter") {
 		double mach = 0.001303;
