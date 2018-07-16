@@ -18,20 +18,16 @@ public class AirfieldManager {
 		boolean[] indexes = new boolean[jets.length];
 		int numMatchingIndexes = 0;
 		for (int i = 0; i < jets.length; i++) {
-			// check the String input against the jet's model
 			if (model.equals(jets[i].getModel())) {
 				indexes[i] = true;
 				numMatchingIndexes++;
-				// check the String input against the jet's model
 				if (model.equals(jets[i].getModel())) {
 					indexes[i] = true;
 					numMatchingIndexes++;
 				}
 			}
 		}
-		// now loop through to see which indexes match
-		// use a separate counter to keep track of which carsByModel
-		// index we are on
+		
 		jetsByModel = new Jet[numMatchingIndexes];
 		int jetsByModelCounter = 0;
 		for (int i = 0; i < indexes.length; i++) {
@@ -46,7 +42,6 @@ public class AirfieldManager {
 
 	public Jet[] getAllJets() {
 		Jet[] afOneJets = afOne.getJets();
-		// return a copy of the array so that callers cannot modify repository data
 		Jet[] allJets = new Jet[afOneJets.length];
 		for (int i = 0; i < afOneJets.length; i++) {
 			allJets[i] = afOneJets[i];

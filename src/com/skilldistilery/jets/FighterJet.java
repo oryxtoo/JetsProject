@@ -2,7 +2,6 @@ package com.skilldistilery.jets;
 
 public class FighterJet extends Jet implements CombatReady {
 
-	//Jet(String model, double speed, int range, long price, String type) {}	
 	public FighterJet(String m, double s, int r, long p, String t) {
 		super(m, s, r, p, t);
 		CombatReady.fly();	
@@ -12,9 +11,6 @@ public class FighterJet extends Jet implements CombatReady {
 	public void fight() {
 		System.out.println("Dog fight! Pew pew pew pew pew!");	
 	}
-//Jets have a fly() method that prints out the Jet details and the amount of 
-//time the Jet can fly until it runs out of fuel (based on speed and range).
-	
 //	@Override
 //	public Object fly(double speed, int range) {
 //		double getRange = speed * range;
