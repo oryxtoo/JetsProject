@@ -6,23 +6,27 @@ private String model;
 private double speed; //mph and/or mach
 private int range;
 private long price;
-private String type;
+//private String type;
+
+
 
 //----constructors--------------------------------------------------------------
 
-public Jet(String m, double s, int r, long p, String t) {
+public Jet(String m, double s, int r, long p) {
     this.model = m;
     this.speed = s;
     this.range = r;
     this.price = p;
-    this.type = t;
+//    this.type = t;
   }
 
 //---------methods--------------------------------------------
 
-	public Jet() {
-	
-}
+//	public Jet createJet() {
+//		Jet j = new Jet(model, speed, range, price);
+//		return j;
+//	
+//}
 	public double getSpeedInMach(double speed) {
 		//if (type == "Fighter") {
 		double mach = 0.001303;
@@ -30,13 +34,12 @@ public Jet(String m, double s, int r, long p, String t) {
 		return speedInMach;
 		}
 	
-	public void fly(Jet[] jetArray) {
-		for (int i = 0; i < jetArray.length; i++) {
-			Jet j = jetArray[i];
-			System.out.println("Model: " + j.getModel() + "Speed: " + j.getSpeed() + "Range: "
-			+ j.getRange() + "Price: " + j.getPrice() + "Type: " + getType());
-			System.out.println("Flight Time: " + (j.getRange() / j.getSpeed()));
-		}
+	public void fly() { 
+		//for one jet
+		System.out.println( this.model + " is flying.");
+		//range/speed = time
+		double time = range/speed;
+		System.out.println("Flight time: " + time);
 	}
 	
 //------Getters & Setters--------------------------------------------------------
@@ -65,17 +68,20 @@ public Jet(String m, double s, int r, long p, String t) {
 	public void setPrice(long price) {
 		this.price = price;
 	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
+//	public String getType() {
+//		return type;
+//	}
+//	public void setType(String type) {
+//		this.type = type;
+//	}
 	public String toString() {
 		return "Jet [model=" + model + ", speed=" + speed + ", range=" + 
-	range + ", price=" + price + "type=" + type + "]";
+	range + ", price=" + price + "type=" + "]";
 	}
-}	
+
+
+	}
+	
 
 
 

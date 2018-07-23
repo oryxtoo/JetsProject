@@ -1,6 +1,6 @@
 package com.skilldistilery.jets;
 
-public class AirField extends Jet {
+public class AirField {
 
 	private Jet[] jets;
 	private int numJets = 0;

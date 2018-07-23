@@ -6,23 +6,19 @@ public class JetImpl extends Jet {
 	private double speed;
 	private int range;
 	private long price;
-	private String type;
+	
 
-	public JetImpl(String model, double speed, int range, long price, String type) {
-		super(model, speed, range, price, type);
+	public JetImpl(String model, double speed, int range, long price) {
+		super(model, speed, range, price);
 		this.model = model;
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
-		this.type = type;
+
 	}
 
 	public double getSpeedInMach(double speed) {
 		return super.getSpeedInMach(speed);
-	}
-	
-	public Object fly(Object getJetInfo, double speed, int range) {
-		return super.fly(getJetInfo, 0, 0);
 	}
 	
 	public void displayJet() {
@@ -33,7 +29,7 @@ public class JetImpl extends Jet {
 	@Override
 	public String toString() {
 		return "Jet [getJetInfo=" + "model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price
-				 + "type=" + type + "]";
+				 + "]";
 	}
 
 	public String getModel() {
@@ -67,11 +63,5 @@ public class JetImpl extends Jet {
 	public void setPrice(long price) {
 		this.price = price;
 	}
-	public String getType() {
-		return type;
-	}
-	
-	public void setType(String type) {
-		this.type = type;
-	}
+
 }

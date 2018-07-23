@@ -27,7 +27,7 @@ public class AirfieldManager {
 				}
 			}
 		}
-		
+
 		jetsByModel = new Jet[numMatchingIndexes];
 		int jetsByModelCounter = 0;
 		for (int i = 0; i < indexes.length; i++) {
@@ -51,42 +51,58 @@ public class AirfieldManager {
 	}
 
 	public void listFleet() {
-		
-		
+		Jet[] afOneJets = afOne.getJets();
+		for (int i = 0; i < afOneJets.length; i++) {
+			System.out.println(afOneJets[i]);
+		}
+
 	}
 
+//Jet details and the amount of time the Jet can fly until it runs out of fuel (based on speed and range).
 	public void fly() {
 		Jet[] jets = getAllJets();
-		for(Jet j : jets) {
-			System.out.println("Model: " + j.getModel() + "Speed: " + j.getSpeed() + "Range: "
-			+ j.getRange() + "Price: " + j.getPrice() + "Type: " + getType());
-			System.out.println("Flight Time: " + (j.getRange() / j.getSpeed()));
+		for (Jet j : jets) {
+			j.fly();
 		}
 	}
 
 	public void viewFastest() {
-		// TODO Auto-generated method stub
-		
+		Jet[] jets = getAllJets();
+		Jet fastest = jets[0];
+		for (Jet j : jets) {
+			if (fastest.getSpeed() < j.getSpeed()) {
+				fastest = j;
+
+			}
+
+		}
+		System.out.println(fastest);
+
 	}
 
 	public void viewRange() {
-		// TODO Auto-generated method stub
-		
+		Jet[] jets = getAllJets();
+		Jet range = jets[0];
+		for (Jet j : jets) {
+			if (range.getRange() > j.getRange()) {
+				range = j;
+			}
+		}System.out.println(range);
+
 	}
 
 	public void loadCargo() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Cargo loaded!");
+
 	}
 
 	public void dogFight() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Dog fight! PEW PEW PEW PEW!");
 	}
 
 	public void quitProg() {
-		// TODO Auto-generated method stub
-		
+		System.exit(0);
+
 	}
 
 }
